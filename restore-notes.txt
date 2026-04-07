@@ -1,0 +1,6 @@
+Restore sketch:
+
+1. sudo pacman -S --needed - < pkglist-pacman.txt
+2. Install AUR packages from pkglist-aur.txt with yay or paru
+3. Copy repo contents into $HOME preserving paths
+4. Verify wallpaper and fastfetch image paths

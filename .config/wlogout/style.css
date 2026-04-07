@@ -1,0 +1,54 @@
+window {
+  background-color: rgba(10, 5, 10, 0.96); /* чуть ближе к фиолетово-винному */
+  border: none;
+}
+
+button {
+  background-color: #1a141f;
+  color: #e8d2f2;
+  font-family: "UnifrakturCook", "Old English Text MT", serif;
+  font-size: 20px;
+  border: 2px solid #c085c1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 12px;
+  background-repeat: no-repeat;
+  background-position: center 25%;
+  background-size: 48px 48px;
+}
+
+button:hover {
+  background-color: #2d1b33;
+  border-color: #db9fdb;
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+button:focus {
+  border-color: #ffbee8;
+}
+
+/* Пример иконок (будем добавлять ниже) */
+.shutdown {
+  background-image: url("icons/shutdown.png");
+}
+
+.reboot {
+  background-image: url("icons/reboot.png");
+}
+
+.logout {
+  background-image: url("icons/logout.png");
+}
+
+.lock {
+  background-image: url("icons/lock.png");
+}
+
+.suspend {
+  background-image: url("icons/suspend.png");
+}
+
+.hibernate {
+  background-image: url("icons/hibernate.png");
+}

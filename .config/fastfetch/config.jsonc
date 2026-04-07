@@ -1,0 +1,175 @@
+// Load with --load-config examples/2.jsonc
+// Note that you must replace the image path to an existing image to display it.
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+// "logo": {
+//   "type": "file",
+//   "source": "/home/halflight/.config/fastfetch/mylogo.txt"
+//   ,"color": "red"
+// },
+"logo": {
+    "type": "kitty-direct",
+    "source": "/home/halflight/.local/share/Steam/userdata/1251550349/760/remote/374320/screenshots/prekol.png",
+    "width": 40,   // Кол-во символов в ширину (примерно)
+    "height": 25   // Кол-во строк в высоту (примерно)
+   },
+    "display": {
+        "separator": " -> ",
+        "constants": [
+            "──────────────────────────────"
+        ]
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "90"
+        },
+         {
+            "type": "title",
+            // "key": "{user}@{hostname}",
+            "keyColor": "#da70ff",
+            "output": "",
+            "outputColor": "#4c5a46"
+          },      
+        {
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "90"
+        },
+        {
+            "type": "custom",
+            "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}       {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
+        },
+        {
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "90"
+        },
+        {
+            "type": "os",
+            "key": "{icon} OS",
+            "keyColor": "#ff4b4b"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├",
+            "keyColor": "#ff4b4b"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖",
+            "keyColor": "#ff4b4b"
+        },
+        {
+            "type": "shell",
+            "key": "│ └",
+            "keyColor": "#ff4b4b"
+        },
+        
+        {
+            "type": "wm",
+            "key": " DE/WM",
+            "keyColor": "#c74bff"
+        },
+        {
+            "type": "lm",
+            "key": "│ ├󰧨",
+            "keyColor": "#c74bff"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├󰉼",
+            "keyColor": "#c74bff"
+        },
+        {
+            "type": "icons",
+            "key": "│ ├󰀻",
+            "keyColor": "#c74bff"
+        },
+        {
+            "type": "terminal",
+            "key": "│ ├",
+            "keyColor": "#c74bff"
+        },
+        {
+            "type": "wallpaper",
+            "key": "│ └󰸉",
+            "keyColor": "#c74bff"
+        },
+        
+        {
+            "type": "host",
+            "key": "󰌢 PC",
+            "keyColor": "green"
+        },
+        {
+            "type": "host",
+            "key": "󰌢 PC",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├󰻠",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "disk",
+            "key": "│ ├",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰑭",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "swap",
+            "key": "│ ├󰓡",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "uptime",
+            "key": "│ ├󰅐",
+            "keyColor": "#78866b"
+        },
+        {
+            "type": "display",
+            "key": "│ └󰍹",
+            "keyColor": "#78866b"
+        },
+        
+        {
+            "type": "sound",
+            "key": " SND",
+            "keyColor": "#ff69b4"
+        },
+        {
+            "type": "player",
+            "key": "│ ├󰥠",
+            "keyColor": "#ff69b4"
+        },
+        {
+            "type": "media",
+            "key": "│ └󰝚",
+            "keyColor": "#ff69b4"
+        },
+        
+        {
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "90"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}       {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
+        }
+    ]
+}
