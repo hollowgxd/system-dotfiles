@@ -1,8 +1,19 @@
 # system-dotfiles
 
-Personal Arch Linux dotfiles and package manifests for recreating the current desktop setup.
+Portable backup of the current Arch Linux desktop setup.
 
-## Included
+## Stack
+
+- Distro: Arch Linux
+- WM: Hyprland
+- Bar: Waybar
+- Launcher: Wofi
+- Logout menu: Wlogout
+- Terminal: Kitty
+- Shell: fish
+- Fetch tool: fastfetch
+
+## Tracked
 
 - `~/.config/hypr`
 - `~/.config/waybar`
@@ -17,26 +28,21 @@ Personal Arch Linux dotfiles and package manifests for recreating the current de
 - `pkglist-pacman.txt`
 - `pkglist-aur.txt`
 
-## Current Stack
+## Layout
 
-- Distro: Arch Linux
-- WM: Hyprland
-- Bar: Waybar
-- Launcher: Wofi
-- Logout menu: Wlogout
-- Terminal: Kitty
-- Shell: fish
+- `.config/*` contains the active configs
+- `archive/waybar` keeps older Waybar variants out of the active tree
+- `scripts/install.sh` syncs the repo into `$HOME` and renders machine-specific paths
 
-## Notes
+## Portability Notes
 
-- Some configs reference local absolute paths.
-- `hyprpaper.conf` points to `/home/halflight/Изображения/takeu.png`
-- `fastfetch/config.jsonc` references local image assets and a Steam screenshot path
+- Machine-generated `fish_variables` is intentionally not tracked
+- `hyprpaper.conf` and `fastfetch/config.jsonc` use `__HOME__` placeholders in the repo
+- `scripts/install.sh` replaces `__HOME__` with the actual home directory during install
 
-## Restore Outline
+## Usage
 
 1. Install packages from `pkglist-pacman.txt`
 2. Install AUR packages from `pkglist-aur.txt`
-3. Copy the files into `$HOME`
-4. Review absolute paths in Hyprland and Fastfetch configs
-
+3. Run `./scripts/install.sh`
+4. Review monitor names, wallpaper selection, and any host-specific paths

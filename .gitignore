@@ -4,4 +4,4 @@
 .env
 .env.*
 !.env.example
-
+.config/fish/fish_variables

@@ -2,5 +2,10 @@ Restore sketch:
 
 1. sudo pacman -S --needed - < pkglist-pacman.txt
 2. Install AUR packages from pkglist-aur.txt with yay or paru
-3. Copy repo contents into $HOME preserving paths
-4. Verify wallpaper and fastfetch image paths
+3. Run ./scripts/install.sh
+4. Verify monitor names, wallpaper and fastfetch paths
+
+Notes:
+
+- fish_variables is not tracked on purpose
+- archive/waybar contains older config variants
