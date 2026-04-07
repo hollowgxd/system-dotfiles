@@ -13,6 +13,14 @@ copy_file() {
   cp "$src" "$dest"
 }
 
+copy_executable() {
+  local src="$1"
+  local dest="$2"
+
+  install -d "$(dirname "$dest")"
+  install -m 755 "$src" "$dest"
+}
+
 render_template() {
   local src="$1"
   local dest="$2"
@@ -46,18 +54,23 @@ copy_file "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/s
 copy_file "$REPO_ROOT/.config/fastfetch/assets/fetch.png" "$TARGET_HOME/.config/fastfetch/assets/fetch.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/cain.png" "$TARGET_HOME/.config/fastfetch/assets/cain.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/mangekyo_square.jpg" "$TARGET_HOME/.config/fastfetch/assets/mangekyo_square.jpg"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/mangekyo_square_ff.png" "$TARGET_HOME/.config/fastfetch/assets/mangekyo_square_ff.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/rinne_square.jpg" "$TARGET_HOME/.config/fastfetch/assets/rinne_square.jpg"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/rinne_square_ff.png" "$TARGET_HOME/.config/fastfetch/assets/rinne_square_ff.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/slark_square.png" "$TARGET_HOME/.config/fastfetch/assets/slark_square.png"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/slark_square_ff.png" "$TARGET_HOME/.config/fastfetch/assets/slark_square_ff.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/mylogo.txt" "$TARGET_HOME/.config/fastfetch/assets/mylogo.txt"
 render_template "$REPO_ROOT/.config/fastfetch/config.jsonc" "$TARGET_HOME/.config/fastfetch/config.jsonc"
 render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-hardware.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-hardware.jsonc"
 render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-software.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-software.jsonc"
 render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-assistant.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-assistant.jsonc"
 
-copy_file "$REPO_ROOT/scripts/install.sh" "$TARGET_HOME/.local/bin/system-dotfiles-install"
-copy_file "$REPO_ROOT/scripts/welcome-fastfetch.sh" "$TARGET_HOME/.local/bin/welcome-fastfetch"
-copy_file "$REPO_ROOT/scripts/welcome-assistant-shell.sh" "$TARGET_HOME/.local/bin/welcome-assistant-shell"
-copy_file "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/welcome-layout"
-copy_file "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
+copy_executable "$REPO_ROOT/scripts/install.sh" "$TARGET_HOME/.local/bin/system-dotfiles-install"
+copy_executable "$REPO_ROOT/scripts/welcome-fastfetch.sh" "$TARGET_HOME/.local/bin/welcome-fastfetch"
+copy_executable "$REPO_ROOT/scripts/welcome-hardware-shell.sh" "$TARGET_HOME/.local/bin/welcome-hardware-shell"
+copy_executable "$REPO_ROOT/scripts/welcome-software-shell.sh" "$TARGET_HOME/.local/bin/welcome-software-shell"
+copy_executable "$REPO_ROOT/scripts/welcome-assistant-shell.sh" "$TARGET_HOME/.local/bin/welcome-assistant-shell"
+copy_executable "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/welcome-layout"
+copy_executable "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
 
 echo "Dotfiles installed into $TARGET_HOME"

@@ -87,12 +87,15 @@ software_addr="$(wait_for_client "welcome-software")"
 assistant_addr="$(wait_for_client "welcome-assistant")"
 
 hyprctl_cmd --batch "\
+dispatch setfloating address:${hardware_addr}; \
 dispatch movetoworkspacesilent ${workspace},address:${hardware_addr}; \
 dispatch movewindowpixel exact ${left_x} ${top_y},address:${hardware_addr}; \
 dispatch resizewindowpixel exact ${top_w} ${top_h},address:${hardware_addr}; \
+dispatch setfloating address:${software_addr}; \
 dispatch movetoworkspacesilent ${workspace},address:${software_addr}; \
 dispatch movewindowpixel exact ${right_x} ${top_y},address:${software_addr}; \
 dispatch resizewindowpixel exact ${top_w} ${top_h},address:${software_addr}; \
+dispatch setfloating address:${assistant_addr}; \
 dispatch movetoworkspacesilent ${workspace},address:${assistant_addr}; \
 dispatch movewindowpixel exact ${left_x} ${bottom_y},address:${assistant_addr}; \
 dispatch resizewindowpixel exact ${bottom_w} ${bottom_h},address:${assistant_addr}"

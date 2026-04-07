@@ -5,5 +5,7 @@
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-	fastfetch
+    if not set -q FASTFETCH_SKIP_AUTO
+        fastfetch
+    end
 end
