@@ -45,7 +45,16 @@ copy_file "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/s
 
 copy_file "$REPO_ROOT/.config/fastfetch/assets/fetch.png" "$TARGET_HOME/.config/fastfetch/assets/fetch.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/cain.png" "$TARGET_HOME/.config/fastfetch/assets/cain.png"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/mangekyo_square.jpg" "$TARGET_HOME/.config/fastfetch/assets/mangekyo_square.jpg"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/rinne_square.jpg" "$TARGET_HOME/.config/fastfetch/assets/rinne_square.jpg"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/slark_square.png" "$TARGET_HOME/.config/fastfetch/assets/slark_square.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/mylogo.txt" "$TARGET_HOME/.config/fastfetch/assets/mylogo.txt"
 render_template "$REPO_ROOT/.config/fastfetch/config.jsonc" "$TARGET_HOME/.config/fastfetch/config.jsonc"
+render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-hardware.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-hardware.jsonc"
+render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-software.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-software.jsonc"
+render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-assistant.jsonc" "$TARGET_HOME/.config/fastfetch/profiles/welcome-assistant.jsonc"
+
+copy_file "$REPO_ROOT/scripts/install.sh" "$TARGET_HOME/.local/bin/system-dotfiles-install"
+copy_file "$REPO_ROOT/scripts/welcome-fastfetch.sh" "$TARGET_HOME/.local/bin/welcome-fastfetch"
 
 echo "Dotfiles installed into $TARGET_HOME"

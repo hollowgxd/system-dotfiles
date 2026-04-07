@@ -33,6 +33,7 @@ Portable backup of the current Arch Linux desktop setup.
 - `.config/*` contains the active configs
 - `archive/waybar` keeps older Waybar variants out of the active tree
 - `scripts/install.sh` syncs the repo into `$HOME` and renders machine-specific paths
+- `.config/fastfetch/profiles` contains dedicated welcome-screen profiles
 
 ## Portability Notes
 
@@ -46,3 +47,10 @@ Portable backup of the current Arch Linux desktop setup.
 2. Install AUR packages from `pkglist-aur.txt`
 3. Run `./scripts/install.sh`
 4. Review monitor names, wallpaper selection, and any host-specific paths
+
+## Welcome Profiles
+
+- `welcome-hardware.jsonc`: hardware-focused terminal with `mangekyo_square.jpg`
+- `welcome-software.jsonc`: software-focused terminal with `rinne_square.jpg`
+- `welcome-assistant.jsonc`: assistant terminal with `slark_square.png`
+- `welcome-fastfetch hardware|software|assistant` runs the matching profile after install
