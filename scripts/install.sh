@@ -56,5 +56,8 @@ render_template "$REPO_ROOT/.config/fastfetch/profiles/welcome-assistant.jsonc" 
 
 copy_file "$REPO_ROOT/scripts/install.sh" "$TARGET_HOME/.local/bin/system-dotfiles-install"
 copy_file "$REPO_ROOT/scripts/welcome-fastfetch.sh" "$TARGET_HOME/.local/bin/welcome-fastfetch"
+copy_file "$REPO_ROOT/scripts/welcome-assistant-shell.sh" "$TARGET_HOME/.local/bin/welcome-assistant-shell"
+copy_file "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/welcome-layout"
+copy_file "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
 
 echo "Dotfiles installed into $TARGET_HOME"

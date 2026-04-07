@@ -54,3 +54,5 @@ Portable backup of the current Arch Linux desktop setup.
 - `welcome-software.jsonc`: software-focused terminal with `rinne_square.jpg`
 - `welcome-assistant.jsonc`: assistant terminal with `slark_square.png`
 - `welcome-fastfetch hardware|software|assistant` runs the matching profile after install
+- `welcome-scene` opens the three-terminal welcome layout on workspace `5` by default
+- `SUPER+SHIFT+W` triggers the same welcome scene from Hyprland
