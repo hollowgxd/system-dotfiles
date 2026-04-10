@@ -41,6 +41,7 @@ copy_file "$REPO_ROOT/.config/hypr/hyprlock.conf" "$TARGET_HOME/.config/hypr/hyp
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/takeu.png" "$TARGET_HOME/.config/hypr/wallpapers/takeu.png"
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/midir.jpg" "$TARGET_HOME/.config/hypr/wallpapers/midir.jpg"
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/midir.png" "$TARGET_HOME/.config/hypr/wallpapers/midir.png"
+copy_file "$REPO_ROOT/.config/hypr/wallpapers/sddm.png" "$TARGET_HOME/.config/hypr/wallpapers/sddm.png"
 render_template "$REPO_ROOT/.config/hypr/hyprpaper.conf" "$TARGET_HOME/.config/hypr/hyprpaper.conf"
 
 copy_file "$REPO_ROOT/.config/gtk-3.0/settings.ini" "$TARGET_HOME/.config/gtk-3.0/settings.ini"

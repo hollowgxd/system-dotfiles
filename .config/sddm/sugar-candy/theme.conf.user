@@ -1,6 +1,6 @@
 [General]
 
-Background="Backgrounds/midir-login.jpg"
+Background="Backgrounds/sddm-login.png"
 DimBackgroundImage="0.22"
 ScaleImageCropped="true"
 ScreenWidth="2560"
