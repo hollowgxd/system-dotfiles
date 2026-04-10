@@ -64,21 +64,21 @@ open_window() {
 
 hyprctl_cmd dispatch workspace "$workspace"
 
+open_window "welcome-assistant" \
+  bash -lc 'exec "$HOME/.local/bin/welcome-assistant-shell"'
+
+assistant_addr="$(wait_for_client "welcome-assistant")"
+
+hyprctl_cmd dispatch focuswindow "address:${assistant_addr}"
+hyprctl_cmd dispatch layoutmsg preselect u
+
 open_window "welcome-hardware" \
   bash -lc 'exec "$HOME/.local/bin/welcome-hardware-shell"'
 
 hardware_addr="$(wait_for_client "welcome-hardware")"
 
 hyprctl_cmd dispatch focuswindow "address:${hardware_addr}"
-hyprctl_cmd dispatch togglesplit
-
-open_window "welcome-assistant" \
-  bash -lc 'exec "$HOME/.local/bin/welcome-assistant-shell"'
-
-assistant_addr="$(wait_for_client "welcome-assistant")"
-
-hyprctl_cmd dispatch focuswindow "address:${hardware_addr}"
-hyprctl_cmd dispatch togglesplit
+hyprctl_cmd dispatch layoutmsg preselect r
 
 open_window "welcome-software" \
   bash -lc 'exec "$HOME/.local/bin/welcome-software-shell"'

@@ -1,147 +1,255 @@
+@define-color bg rgba(7, 4, 14, 0.92);
+@define-color panel rgba(13, 9, 24, 0.08);
+@define-color panel-strong rgba(20, 11, 36, 0.96);
+@define-color hover rgba(124, 70, 218, 0.16);
+@define-color active rgba(145, 88, 242, 0.24);
+@define-color active-strong rgba(168, 104, 255, 0.34);
+@define-color fg #eadfff;
+@define-color muted #9683b6;
+@define-color accent #c88cff;
+@define-color power-hover rgba(136, 46, 100, 0.68);
+@define-color danger rgba(156, 48, 78, 0.68);
+
 * {
-  font-family: "Cinzel", "UnifrakturCook", "JetBrains Mono", sans-serif;
-  font-size: 18px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 0;
 }
 
 window#waybar {
-  background-color: #0b0b0b; /* почти чёрный */
-  border-radius: 13px;
-  transition: background-color 0.5s;
+  background: @bg;
+  color: @fg;
+  border: 1px solid rgba(110, 42, 168, 0.24);
+  border-radius: 18px;
+  box-shadow: 0 0 14px rgba(125, 43, 194, 0.16), 0 0 28px rgba(75, 24, 120, 0.14), 0 14px 32px rgba(11, 5, 22, 0.58);
 }
 
-button {
-  box-shadow: inset 0 -3px transparent;
-  border: none;
-  border-radius: 0;
+tooltip {
+  background: rgba(9, 5, 18, 0.97);
+  color: #f4ebff;
+  border: 1px solid rgba(185, 121, 255, 0.24);
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(96, 34, 176, 0.22);
 }
 
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px #e6c77d; /* бледно-золотой */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 6px;
 }
 
-#workspaces button {
-  padding: 0 5px;
-  background-color: transparent;
-  color: #e6c77d;
-}
-
-#workspaces button:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-#workspaces button.focused {
-  background-color: #5c1b29;
-  color: #e0e0e0;
-  box-shadow: inset 0 -3px #b12e34;
-}
-
-#workspaces button.urgent {
-  background-color: #a01a1f;
-}
-
-#mode {
-  background-color: #3b2a2a;
-  box-shadow: inset 0 -3px #826644;
-}
-
-/* Модули */
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
+#custom-start,
+#custom-prizrak,
+#window,
 #network,
-#pulseaudio {
-  padding: 0 10px;
-  border-radius: 8px;
-  background-color: #2a0e14;
-  color: #e6c77d;
-  border: 1px solid #444;
+#pulseaudio,
+#custom-keyboard,
+#clock,
+#custom-power,
+#workspaces {
+  background: @panel;
+  border: 1px solid rgba(176, 112, 255, 0.018);
+  border-radius: 12px;
+  box-shadow: none;
+  transition: all 0.16s ease;
 }
 
-#pulseaudio {
-  color: #b12e34;
+#custom-start,
+#custom-prizrak,
+#window,
+#network,
+#pulseaudio,
+#custom-keyboard,
+#clock,
+#custom-power {
+  margin: 4px 3px;
+  min-height: 30px;
 }
 
-#network {
-  color: #e6c77d;
-}
-
-#temperature {
-  color: #9abbd9;
-}
-
-#battery {
-  color: #a2c07d;
-}
-
+#custom-start,
+#custom-prizrak,
+#network,
+#pulseaudio,
+#custom-keyboard,
 #clock {
-  color: #f4b183;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 14px 14px;
+  padding-left: 28px;
+  padding-right: 9px;
 }
 
-#cpu {
-  color: #cd9167;
+#custom-start,
+#custom-prizrak,
+#custom-power {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 0;
 }
 
-#memory {
-  color: #a2c07d;
+#custom-start:hover,
+#custom-prizrak:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-keyboard:hover,
+#clock:hover,
+#custom-power:hover {
+  background-color: @panel-strong;
+  border-color: rgba(191, 132, 255, 0.1);
+  box-shadow: 0 0 15px rgba(145, 88, 242, 0.2);
+}
+
+#custom-start {
+  min-width: 32px;
+  color: transparent;
+  background-image: url("icons/app.svg");
+}
+
+#custom-prizrak {
+  min-width: 34px;
+  color: transparent;
+  background-image: url("/home/halflight/prizrak-box.svg");
+  background-size: 18px 18px;
+}
+
+#custom-start.active,
+#custom-prizrak.active {
+  background-color: @active;
+  border-color: rgba(215, 164, 255, 0.16);
+  box-shadow: 0 0 18px rgba(173, 94, 255, 0.28), inset 0 0 0 1px rgba(242, 216, 255, 0.04);
+}
+
+#custom-prizrak.active {
+  background-image: url("/home/halflight/prizrak-box.svg");
+}
+
+#custom-prizrak.inactive {
+  opacity: 0.82;
 }
 
 #window {
-  color: #e0e0e0;
+  color: @muted;
+  padding-left: 14px;
+  padding-right: 14px;
+  min-width: 240px;
+  background: rgba(12, 8, 22, 0.12);
 }
 
-.modules-right,
-.modules-left,
-.modules-center {
-  background-color: #0b0b0b;
-  border-radius: 15px;
+#workspaces {
+  padding: 2px;
 }
 
-.modules-right {
-  padding: 0 10px;
+#workspaces button {
+  color: rgba(176, 153, 217, 0.72);
+  background: transparent;
+  border-radius: 9px;
+  margin: 0 2px;
+  min-width: 26px;
+  padding: 0 9px;
+  border: 1px solid transparent;
+  box-shadow: none;
 }
 
-.modules-left {
-  padding: 0 20px;
+#workspaces button:hover {
+  color: #efe4ff;
+  background: @hover;
+  border-color: rgba(192, 132, 255, 0.1);
+  box-shadow: 0 0 14px rgba(154, 82, 255, 0.18);
 }
 
-.modules-center {
-  padding: 0 10px;
-}
-
-/* Батарея */
-#battery.charging,
-#battery.plugged {
-  color: #6c9bd2;
-}
-
-@keyframes blink {
-  to {
-    color: #000000;
-  }
-}
-
-#battery.critical:not(.charging) {
-  background-color: #b12e34;
+#workspaces button.active,
+#workspaces button.focused {
   color: #ffffff;
-  animation: blink 0.5s steps(12) infinite alternate;
+  background: @active;
+  border-color: rgba(215, 164, 255, 0.16);
+  box-shadow: 0 0 18px rgba(173, 94, 255, 0.28), inset 0 0 0 1px rgba(242, 216, 255, 0.04);
 }
 
-label:focus {
-  background-color: #1a0a0f;
+#workspaces button.urgent {
+  color: #fff6fb;
+  background: rgba(178, 56, 113, 0.86);
+}
+
+#network {
+  color: #efe4ff;
+  min-width: 54px;
+  background-image: url("icons/network.svg");
+}
+
+#network.ethernet,
+#network.linked,
+#network.disconnected {
+  min-width: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  color: transparent;
+  background-position: center;
+  background-size: 15px 15px;
+}
+
+#pulseaudio {
+  color: #f1e7ff;
+  min-width: 62px;
+  background-image: url("icons/volume.svg");
 }
 
 #pulseaudio.muted {
-  color: #6c6c6c;
+  color: #ffd6e0;
+  background-color: @danger;
+  border-color: rgba(255, 168, 192, 0.16);
+  box-shadow: 0 0 14px rgba(214, 76, 114, 0.18);
+  background-image: url("icons/volume-mute.svg");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 14px 14px;
 }
 
-/* Tooltip */
-tooltip {
-  background: #1a0a0f;
-  color: #e6c77d;
-  border: 1px solid #826644;
-  font-style: italic;
-  font-family: "Cinzel", "UnifrakturCook", sans-serif;
+#custom-keyboard {
+  color: #ecddff;
+  min-width: 52px;
+  background-image: url("icons/keyboard.svg");
+}
+
+#clock {
+  color: #f6ebff;
+  min-width: 58px;
+  background-image: url("icons/clock.svg");
+}
+
+#custom-power {
+  min-width: 32px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  background-image: url("icons/power-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+#custom-power:hover {
+  background-color: @power-hover;
+  border-color: rgba(255, 182, 221, 0.14);
+  box-shadow: 0 0 18px rgba(217, 82, 146, 0.22);
+  background-image: url("icons/power-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+#custom-power:active {
+  background-color: @power-hover;
+  border-color: rgba(255, 182, 221, 0.14);
+  box-shadow: 0 0 18px rgba(217, 82, 146, 0.22);
+  background-image: url("icons/power-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 }

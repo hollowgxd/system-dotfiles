@@ -49,7 +49,13 @@ copy_file "$REPO_ROOT/.config/waybar/style.css" "$TARGET_HOME/.config/waybar/sty
 copy_file "$REPO_ROOT/.config/wofi/config" "$TARGET_HOME/.config/wofi/config"
 copy_file "$REPO_ROOT/.config/wofi/style.css" "$TARGET_HOME/.config/wofi/style.css"
 
-copy_file "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/style.css"
+render_template "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/style.css"
+copy_file "$REPO_ROOT/.config/wlogout/rune1.png" "$TARGET_HOME/.config/wlogout/rune1.png"
+copy_file "$REPO_ROOT/.config/wlogout/rune2.png" "$TARGET_HOME/.config/wlogout/rune2.png"
+copy_file "$REPO_ROOT/.config/wlogout/rune3.png" "$TARGET_HOME/.config/wlogout/rune3.png"
+copy_file "$REPO_ROOT/.config/wlogout/rune4.png" "$TARGET_HOME/.config/wlogout/rune4.png"
+copy_file "$REPO_ROOT/.config/wlogout/rune5.png" "$TARGET_HOME/.config/wlogout/rune5.png"
+copy_file "$REPO_ROOT/.config/wlogout/rune6.png" "$TARGET_HOME/.config/wlogout/rune6.png"
 
 copy_file "$REPO_ROOT/.config/fastfetch/assets/fetch.png" "$TARGET_HOME/.config/fastfetch/assets/fetch.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/cain.png" "$TARGET_HOME/.config/fastfetch/assets/cain.png"

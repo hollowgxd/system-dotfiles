@@ -3,10 +3,5 @@
 set -euo pipefail
 
 clear
-"$HOME/.local/bin/welcome-fastfetch" assistant || true
-
-printf '\n'
-
 export FASTFETCH_SKIP_AUTO=1
-
-exec fish -i
+exec codex
