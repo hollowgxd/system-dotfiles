@@ -2,6 +2,8 @@ show=drun
 width=45%
 height=40%
 prompt=Search...
+# Keep wofi as a regular Hyprland window so it inherits the same glow and
+# animations as other floating tiles and does not swallow clicks over waybar.
 normal_window=true
 location=center
 gtk-dark=true

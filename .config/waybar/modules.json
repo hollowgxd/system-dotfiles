@@ -32,7 +32,7 @@
   },
   "custom/appmenu": {
     "format": "Apps",
-    "on-click": "sleep 0.2;wofi --conf ~/.config/wofi/config --style ~/.config/wofi/style.css --show drun --replace",
+    "on-click": "~/.config/waybar/scripts/menu-toggle.sh",
     "tooltip": false
   },
   "custom/settings": {
