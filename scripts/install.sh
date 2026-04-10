@@ -72,7 +72,7 @@ copy_file "$REPO_ROOT/.config/wofi/config" "$TARGET_HOME/.config/wofi/config"
 copy_file "$REPO_ROOT/.config/wofi/style.css" "$TARGET_HOME/.config/wofi/style.css"
 
 render_template "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/style.css"
-copy_file "$REPO_ROOT/.config/wlogout/layout" "$TARGET_HOME/.config/wlogout/layout"
+render_template "$REPO_ROOT/.config/wlogout/layout" "$TARGET_HOME/.config/wlogout/layout"
 copy_file "$REPO_ROOT/.config/wlogout/lock.png" "$TARGET_HOME/.config/wlogout/lock.png"
 copy_file "$REPO_ROOT/.config/wlogout/exit.png" "$TARGET_HOME/.config/wlogout/exit.png"
 copy_file "$REPO_ROOT/.config/wlogout/suspend.png" "$TARGET_HOME/.config/wlogout/suspend.png"
@@ -109,5 +109,6 @@ copy_executable "$REPO_ROOT/scripts/welcome-software-shell.sh" "$TARGET_HOME/.lo
 copy_executable "$REPO_ROOT/scripts/welcome-assistant-shell.sh" "$TARGET_HOME/.local/bin/welcome-assistant-shell"
 copy_executable "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/welcome-layout"
 copy_executable "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
+copy_executable "$REPO_ROOT/scripts/session-exit.sh" "$TARGET_HOME/.local/bin/session-exit"
 
 echo "Dotfiles installed into $TARGET_HOME"
