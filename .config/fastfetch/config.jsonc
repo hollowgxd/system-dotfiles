@@ -9,7 +9,7 @@
 //   ,"color": "red"
 // },
 "logo": {
-    "type": "kitty-direct",
+    "type": "kitty-icat",
     "source": "__HOME__/.config/fastfetch/assets/sasuke.png",
     "width": 26,
     "height": 13,
@@ -34,63 +34,38 @@
             "keyColor": "#c88cff"
         },
         {
-            "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "#c88cff"
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "90"
         },
         {
-            "type": "packages",
-            "key": "│ ├󰏖",
-            "keyColor": "#c88cff"
+            "type": "custom",
+            "format": "SESSION",
+            "outputColor": "#8f58f2"
         },
         {
-            "type": "shell",
-            "key": "│ ├",
-            "keyColor": "#c88cff"
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "90"
         },
         {
-            "type": "terminal",
-            "key": "│ └",
-            "keyColor": "#c88cff"
-        },
-        {
-            "type": "wm",
-            "key": " WM",
+            "type": "processes",
+            "key": "󰧑 PROC",
             "keyColor": "#8f58f2"
         },
         {
-            "type": "host",
-            "key": "│ ├󰌢",
+            "type": "loadavg",
+            "key": "│ ├󰓅",
             "keyColor": "#8f58f2"
         },
         {
-            "type": "cpu",
-            "key": "│ ├󰻠",
+            "type": "datetime",
+            "key": "│ ├󰃰",
             "keyColor": "#8f58f2"
         },
         {
-            "type": "gpu",
-            "key": "│ ├󰍛",
-            "keyColor": "#8f58f2"
-        },
-        {
-            "type": "memory",
-            "key": "│ ├󰑭",
-            "keyColor": "#8f58f2"
-        },
-        {
-            "type": "disk",
-            "key": "│ ├",
-            "keyColor": "#8f58f2"
-        },
-        {
-            "type": "uptime",
-            "key": "│ ├󰅐",
-            "keyColor": "#8f58f2"
-        },
-        {
-            "type": "display",
-            "key": "│ └󰍹",
+            "type": "users",
+            "key": "│ └󰀄",
             "keyColor": "#8f58f2"
         }
     ]
