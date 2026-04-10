@@ -10,9 +10,10 @@
 // },
 "logo": {
     "type": "kitty-direct",
-    "source": "__HOME__/.config/fastfetch/assets/fetch.png",
-    "width": 40,   // Кол-во символов в ширину (примерно)
-    "height": 25   // Кол-во строк в высоту (примерно)
+    "source": "__HOME__/.config/fastfetch/assets/sasuke.png",
+    "width": 26,
+    "height": 13,
+    "preserveAspectRatio": true
    },
     "display": {
         "separator": " -> ",
@@ -22,154 +23,75 @@
     },
     "modules": [
         {
-            "type": "custom",
-            "format": "┌{$1}{$1}┐",
-            "outputColor": "90"
-        },
-         {
             "type": "title",
-            // "key": "{user}@{hostname}",
-            "keyColor": "#da70ff",
-            "output": "",
-            "outputColor": "#4c5a46"
-          },      
-        {
-            "type": "custom",
-            "format": "└{$1}{$1}┘",
-            "outputColor": "90"
-        },
-        {
-            "type": "custom",
-            "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}       {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
-        },
-        {
-            "type": "custom",
-            "format": "┌{$1}{$1}┐",
-            "outputColor": "90"
+            "key": "",
+            "keyColor": "#c88cff",
+            "outputColor": "#eadfff"
         },
         {
             "type": "os",
             "key": "{icon} OS",
-            "keyColor": "#ff4b4b"
+            "keyColor": "#c88cff"
         },
         {
             "type": "kernel",
             "key": "│ ├",
-            "keyColor": "#ff4b4b"
+            "keyColor": "#c88cff"
         },
         {
             "type": "packages",
             "key": "│ ├󰏖",
-            "keyColor": "#ff4b4b"
+            "keyColor": "#c88cff"
         },
         {
             "type": "shell",
-            "key": "│ └",
-            "keyColor": "#ff4b4b"
-        },
-        
-        {
-            "type": "wm",
-            "key": " DE/WM",
-            "keyColor": "#c74bff"
-        },
-        {
-            "type": "lm",
-            "key": "│ ├󰧨",
-            "keyColor": "#c74bff"
-        },
-        {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
-            "keyColor": "#c74bff"
-        },
-        {
-            "type": "icons",
-            "key": "│ ├󰀻",
-            "keyColor": "#c74bff"
+            "key": "│ ├",
+            "keyColor": "#c88cff"
         },
         {
             "type": "terminal",
-            "key": "│ ├",
-            "keyColor": "#c74bff"
+            "key": "│ └",
+            "keyColor": "#c88cff"
         },
         {
-            "type": "wallpaper",
-            "key": "│ └󰸉",
-            "keyColor": "#c74bff"
-        },
-        
-        {
-            "type": "host",
-            "key": "󰌢 PC",
-            "keyColor": "green"
+            "type": "wm",
+            "key": " WM",
+            "keyColor": "#8f58f2"
         },
         {
             "type": "host",
-            "key": "󰌢 PC",
-            "keyColor": "#78866b"
+            "key": "│ ├󰌢",
+            "keyColor": "#8f58f2"
         },
         {
             "type": "cpu",
             "key": "│ ├󰻠",
-            "keyColor": "#78866b"
+            "keyColor": "#8f58f2"
         },
         {
             "type": "gpu",
             "key": "│ ├󰍛",
-            "keyColor": "#78866b"
-        },
-        {
-            "type": "disk",
-            "key": "│ ├",
-            "keyColor": "#78866b"
+            "keyColor": "#8f58f2"
         },
         {
             "type": "memory",
             "key": "│ ├󰑭",
-            "keyColor": "#78866b"
+            "keyColor": "#8f58f2"
         },
         {
-            "type": "swap",
-            "key": "│ ├󰓡",
-            "keyColor": "#78866b"
+            "type": "disk",
+            "key": "│ ├",
+            "keyColor": "#8f58f2"
         },
         {
             "type": "uptime",
             "key": "│ ├󰅐",
-            "keyColor": "#78866b"
+            "keyColor": "#8f58f2"
         },
         {
             "type": "display",
             "key": "│ └󰍹",
-            "keyColor": "#78866b"
-        },
-        
-        {
-            "type": "sound",
-            "key": " SND",
-            "keyColor": "#ff69b4"
-        },
-        {
-            "type": "player",
-            "key": "│ ├󰥠",
-            "keyColor": "#ff69b4"
-        },
-        {
-            "type": "media",
-            "key": "│ └󰝚",
-            "keyColor": "#ff69b4"
-        },
-        
-        {
-            "type": "custom",
-            "format": "└{$1}{$1}┘",
-            "outputColor": "90"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}       {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
+            "keyColor": "#8f58f2"
         }
     ]
 }

@@ -48,6 +48,7 @@ copy_file "$REPO_ROOT/.themes/WaybarDark/index.theme" "$TARGET_HOME/.themes/Wayb
 copy_file "$REPO_ROOT/.themes/WaybarDark/gtk-3.0/gtk.css" "$TARGET_HOME/.themes/WaybarDark/gtk-3.0/gtk.css"
 
 copy_file "$REPO_ROOT/.config/kitty/kitty.conf" "$TARGET_HOME/.config/kitty/kitty.conf"
+copy_file "$REPO_ROOT/.config/alacritty/alacritty.toml" "$TARGET_HOME/.config/alacritty/alacritty.toml"
 
 copy_file "$REPO_ROOT/.config/waybar/config" "$TARGET_HOME/.config/waybar/config"
 copy_file "$REPO_ROOT/.config/waybar/modules.json" "$TARGET_HOME/.config/waybar/modules.json"
@@ -84,6 +85,8 @@ copy_file "$REPO_ROOT/.config/wlogout/rune5.png" "$TARGET_HOME/.config/wlogout/r
 copy_file "$REPO_ROOT/.config/wlogout/rune6.png" "$TARGET_HOME/.config/wlogout/rune6.png"
 
 copy_file "$REPO_ROOT/.config/fastfetch/assets/fetch.png" "$TARGET_HOME/.config/fastfetch/assets/fetch.png"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/sasuke.jpg" "$TARGET_HOME/.config/fastfetch/assets/sasuke.jpg"
+copy_file "$REPO_ROOT/.config/fastfetch/assets/sasuke.png" "$TARGET_HOME/.config/fastfetch/assets/sasuke.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/cain.png" "$TARGET_HOME/.config/fastfetch/assets/cain.png"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/mangekyo_square.jpg" "$TARGET_HOME/.config/fastfetch/assets/mangekyo_square.jpg"
 copy_file "$REPO_ROOT/.config/fastfetch/assets/mangekyo_square_ff.png" "$TARGET_HOME/.config/fastfetch/assets/mangekyo_square_ff.png"
