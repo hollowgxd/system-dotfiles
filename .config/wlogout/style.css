@@ -1,9 +1,12 @@
 window {
-  background: rgba(6, 4, 12, 0.92);
+  background-color: rgba(6, 4, 12, 0.92);
 }
 
 button {
-  background: linear-gradient(180deg, rgba(14, 7, 28, 0.96), rgba(7, 4, 15, 0.96));
+  /* Use background-color instead of background shorthand so rune images (background-image)
+   * are never reset on hover/active.
+   */
+  background-color: rgba(14, 7, 28, 0.96);
   background-repeat: no-repeat;
   background-position: center 24px;
   background-size: 126px;
@@ -22,7 +25,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(180deg, rgba(123, 28, 223, 0.99), rgba(49, 9, 97, 0.99));
+  background-color: rgba(123, 28, 223, 0.99);
   border-color: rgba(228, 156, 255, 0.62);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 28px rgba(164, 73, 255, 0.34), 0 0 12px rgba(123, 28, 223, 0.22);
   background-position: center 20px;
@@ -31,7 +34,7 @@ button:hover {
 
 button:focus,
 button:active {
-  background: linear-gradient(180deg, rgba(137, 37, 228, 0.94), rgba(56, 11, 114, 0.98));
+  background-color: rgba(137, 37, 228, 0.94);
   border-color: rgba(232, 162, 255, 0.54);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 20px rgba(169, 73, 255, 0.36);
   background-position: center 20px;
