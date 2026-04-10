@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=WaybarDark
+Type=X-GNOME-Metatheme
+Comment=Custom JetBrains Mono purple theme
+
+[X-GNOME-Metatheme]
+GtkTheme=WaybarDark
+IconTheme=Papirus-Dark
+CursorTheme=Dragon-Scimitar
+ButtonLayout=close,minimize,maximize:

@@ -1,0 +1,85 @@
+/* Base theme: keep full GTK widget coverage from Graphite-Dark. */
+@import url("/home/halflight/.themes/Graphite-Dark/gtk-3.0/gtk.css");
+
+/* WaybarDark overlay */
+window.background,
+.background {
+  background-color: rgba(6, 4, 12, 0.92);
+  color: #e6ddff;
+}
+
+headerbar,
+.titlebar {
+  background-image: none;
+  background-color: rgba(14, 8, 24, 0.96);
+  border-color: rgba(128, 67, 192, 0.55);
+  box-shadow: inset 0 -1px rgba(180, 126, 255, 0.12);
+}
+
+menubar {
+  background-image: none;
+  background-color: rgba(15, 9, 28, 0.95);
+  border-bottom: 1px solid rgba(128, 67, 192, 0.35);
+  color: #efe4ff;
+}
+
+menu,
+popover.background,
+.context-menu {
+  background-image: none;
+  background-color: rgba(12, 7, 22, 0.98);
+  border: 1px solid rgba(151, 88, 222, 0.42);
+  border-radius: 8px;
+}
+
+menuitem,
+menuitem label,
+menubar > menuitem {
+  color: #efe4ff;
+}
+
+menuitem:hover,
+menuitem:focus,
+menubar > menuitem:hover,
+menubar > menuitem:focus {
+  background-image: none;
+  background-color: rgba(121, 58, 196, 0.32);
+  color: #ffffff;
+}
+
+button,
+entry,
+combobox button {
+  background-image: none;
+  background-color: rgba(18, 20, 35, 0.9);
+  border: 1px solid rgba(168, 139, 255, 0.3);
+  border-radius: 10px;
+  color: #f1eaff;
+  box-shadow: 0 0 8px rgba(137, 37, 228, 0.22);
+}
+
+button:hover,
+entry:focus,
+combobox button:hover {
+  border-color: rgba(192, 148, 255, 0.55);
+  box-shadow: 0 0 10px rgba(164, 73, 255, 0.28);
+}
+
+treeview.view,
+treeview.view:selected,
+treeview.view row,
+treeview.view row:selected {
+  color: #cdbbff;
+}
+
+treeview.view row:selected,
+treeview.view row:selected:focus {
+  background-image: none;
+  background-color: rgba(137, 37, 228, 0.62);
+  color: #ffffff;
+}
+
+treeview.view row:hover {
+  background-image: none;
+  background-color: rgba(123, 28, 223, 0.24);
+}

@@ -41,10 +41,28 @@ copy_file "$REPO_ROOT/.config/hypr/hyprlock.conf" "$TARGET_HOME/.config/hypr/hyp
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/takeu.png" "$TARGET_HOME/.config/hypr/wallpapers/takeu.png"
 render_template "$REPO_ROOT/.config/hypr/hyprpaper.conf" "$TARGET_HOME/.config/hypr/hyprpaper.conf"
 
+copy_file "$REPO_ROOT/.config/gtk-3.0/settings.ini" "$TARGET_HOME/.config/gtk-3.0/settings.ini"
+copy_file "$REPO_ROOT/.config/gtk-3.0/gtk.css" "$TARGET_HOME/.config/gtk-3.0/gtk.css"
+copy_file "$REPO_ROOT/.config/gtk-4.0/settings.ini" "$TARGET_HOME/.config/gtk-4.0/settings.ini"
+copy_file "$REPO_ROOT/.themes/WaybarDark/index.theme" "$TARGET_HOME/.themes/WaybarDark/index.theme"
+copy_file "$REPO_ROOT/.themes/WaybarDark/gtk-3.0/gtk.css" "$TARGET_HOME/.themes/WaybarDark/gtk-3.0/gtk.css"
+
 copy_file "$REPO_ROOT/.config/kitty/kitty.conf" "$TARGET_HOME/.config/kitty/kitty.conf"
 
 copy_file "$REPO_ROOT/.config/waybar/config" "$TARGET_HOME/.config/waybar/config"
 copy_file "$REPO_ROOT/.config/waybar/style.css" "$TARGET_HOME/.config/waybar/style.css"
+copy_executable "$REPO_ROOT/.config/waybar/scripts/menu-status.sh" "$TARGET_HOME/.config/waybar/scripts/menu-status.sh"
+copy_executable "$REPO_ROOT/.config/waybar/scripts/menu-toggle.sh" "$TARGET_HOME/.config/waybar/scripts/menu-toggle.sh"
+copy_executable "$REPO_ROOT/.config/waybar/scripts/keyboard-layout.sh" "$TARGET_HOME/.config/waybar/scripts/keyboard-layout.sh"
+copy_executable "$REPO_ROOT/.config/waybar/scripts/prizrak-launch.sh" "$TARGET_HOME/.config/waybar/scripts/prizrak-launch.sh"
+copy_executable "$REPO_ROOT/.config/waybar/scripts/prizrak-status.sh" "$TARGET_HOME/.config/waybar/scripts/prizrak-status.sh"
+copy_file "$REPO_ROOT/.config/waybar/icons/app.svg" "$TARGET_HOME/.config/waybar/icons/app.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/network.svg" "$TARGET_HOME/.config/waybar/icons/network.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/volume.svg" "$TARGET_HOME/.config/waybar/icons/volume.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/volume-mute.svg" "$TARGET_HOME/.config/waybar/icons/volume-mute.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/keyboard.svg" "$TARGET_HOME/.config/waybar/icons/keyboard.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/clock.svg" "$TARGET_HOME/.config/waybar/icons/clock.svg"
+copy_file "$REPO_ROOT/.config/waybar/icons/power-off.svg" "$TARGET_HOME/.config/waybar/icons/power-off.svg"
 
 copy_file "$REPO_ROOT/.config/wofi/config" "$TARGET_HOME/.config/wofi/config"
 copy_file "$REPO_ROOT/.config/wofi/style.css" "$TARGET_HOME/.config/wofi/style.css"
