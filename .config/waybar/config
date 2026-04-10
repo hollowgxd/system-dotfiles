@@ -91,6 +91,6 @@
   "custom/power": {
     "format": " ",
     "tooltip": false,
-    "on-click": "wlogout"
+    "on-click": "/home/halflight/.local/bin/wlogout -p layer-shell -m 72 -c 24 -r 24"
   }
 }

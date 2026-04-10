@@ -1,0 +1,183 @@
+//  __  __           _       _            
+// |  \/  | ___   __| |_   _| | ___  ___  
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
+// | |  | | (_) | (_| | |_| | |  __/\__ \ 
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
+//                                        
+//  
+// by Stephan Raabe (2023) 
+// ----------------------------------------------------- 
+//
+{
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "active-only": false,
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 72,
+    "rewrite": {
+      "": "Desktop"
+    },
+    "separate-outputs": true
+  },
+  "custom/empty": {
+    "format": ""
+  },
+  "custom/appmenu": {
+    "format": "Apps",
+    "on-click": "sleep 0.2;wofi -show drun -replace",
+    "tooltip": false
+  },
+  "custom/settings": {
+    "format": "",
+    "on-click": "nwg-look",
+    "tooltip": false
+  },
+  "custom/updates": {
+    "format": "󰚰",
+    "tooltip": false
+  },
+  "custom/filemanager": {
+    "format": "",
+    "on-click": "thunar",
+    "tooltip": false
+  },
+  "custom/prizrak": {
+    "exec": "~/.config/waybar/scripts/prizrak-status.sh",
+    "return-type": "json",
+    "interval": 3,
+    "format": "{}",
+    "on-click": "~/.config/waybar/scripts/prizrak-launch.sh"
+  },
+  "custom/cliphist": {
+    "format": "",
+    "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
+    "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
+    "tooltip": false
+  },
+  "custom/exit": {
+    "format": "",
+    "on-click": "/home/halflight/.local/bin/wlogout -p layer-shell -m 72 -c 24 -r 24",
+    "tooltip": false
+  },
+  "custom/ml4w-welcome": {
+    "format": "",
+    "on-click": "~/.local/bin/welcome-scene",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%Y-%m-%d}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%",
+    "tooltip": false
+  },
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/",
+    "tooltip": false
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "network": {
+    "format-wifi": "󰤨 {signalStrength}%",
+    "format-ethernet": "󰈀 Wired",
+    "format-linked": "󰈀 No IP",
+    "format-disconnected": "󰖪 Offline",
+    "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr}\nSignal: {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Network disconnected",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " 0%",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "tooltip": true,
+    "tooltip-format": "Volume {volume}%\nScroll: +/-2%\nLeft click: mute\nMiddle click: 100%\nRight click: mixer",
+    "scroll-step": 2,
+    "max-volume": 200,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-middle": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 1.0",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 2%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip": true,
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "on-click-right": "hyprlock"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "custom/system": {
+    "format": "",
+    "tooltip": false
+  },
+  "group/settings": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/settings"
+    ]
+  },
+  "group/quicklinks": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/prizrak",
+      "custom/filemanager"
+    ]
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory",
+      "hyprland/language"
+    ]
+  }
+}
