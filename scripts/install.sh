@@ -71,6 +71,9 @@ copy_file "$REPO_ROOT/.config/waybar/icons/power-off.svg" "$TARGET_HOME/.config/
 
 copy_file "$REPO_ROOT/.config/wofi/config" "$TARGET_HOME/.config/wofi/config"
 copy_file "$REPO_ROOT/.config/wofi/style.css" "$TARGET_HOME/.config/wofi/style.css"
+copy_file "$REPO_ROOT/.config/cava/config" "$TARGET_HOME/.config/cava/config"
+copy_file "$REPO_ROOT/.config/cava/config-horizontal" "$TARGET_HOME/.config/cava/config-horizontal"
+copy_file "$REPO_ROOT/.config/cava/config-waveform" "$TARGET_HOME/.config/cava/config-waveform"
 
 render_template "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/style.css"
 render_template "$REPO_ROOT/.config/wlogout/layout" "$TARGET_HOME/.config/wlogout/layout"
@@ -111,5 +114,6 @@ copy_executable "$REPO_ROOT/scripts/welcome-assistant-shell.sh" "$TARGET_HOME/.l
 copy_executable "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/welcome-layout"
 copy_executable "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
 copy_executable "$REPO_ROOT/scripts/session-exit.sh" "$TARGET_HOME/.local/bin/session-exit"
+copy_executable "$REPO_ROOT/scripts/cava-preset.sh" "$TARGET_HOME/.local/bin/cava-preset"
 
 echo "Dotfiles installed into $TARGET_HOME"

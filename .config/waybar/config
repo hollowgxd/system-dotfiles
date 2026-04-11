@@ -61,9 +61,29 @@
     "on-click": "~/.config/waybar/scripts/keyboard-layout.sh toggle"
   },
   "clock": {
+    "locale": "ru_RU.UTF-8",
     "format": "{:%H:%M}",
-    "format-alt": "{:%d.%m.%Y}",
-    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    "format-alt": "{:%a %d.%m}",
+    "tooltip": true,
+    "tooltip-format": "<span size='large' weight='700'>{:%A, %d %B %Y}</span>\n<span foreground='#9683b6'>Неделя {:%V} | {:%H:%M} | {:%Z}</span>\n\n<tt>{calendar}</tt>\n\n<span foreground='#9683b6'>Колесо: листать | ПКМ: месяц/год</span>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "iso8601": true,
+      "format": {
+        "months": "<span foreground='#f4ebff' weight='700'>{}</span>",
+        "days": "<span foreground='#eadfff'>{}</span>",
+        "weeks": "<span foreground='#9683b6'>{}</span>",
+        "weekdays": "<span foreground='#c88cff' weight='700'>{}</span>",
+        "today": "<span foreground='#ffffff' background='#9158f2' weight='700'>{}</span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "network": {
     "format-wifi": "{signalStrength}%",

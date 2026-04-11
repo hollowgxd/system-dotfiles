@@ -1,0 +1,34 @@
+[general]
+framerate = 75
+autosens = 1
+sensitivity = 90
+bars = 0
+bar_width = 2
+bar_spacing = 1
+sleep_timer = 2
+
+[input]
+method = pipewire
+source = auto
+
+[output]
+method = noncurses
+orientation = bottom
+channels = stereo
+reverse = 0
+xaxis = none
+synchronized_sync = 1
+show_idle_bar_heads = 0
+waveform = 1
+
+[color]
+background = '#07040e'
+foreground = '#c88cff'
+horizontal_gradient = 1
+horizontal_gradient_color_1 = '#6e2aa8'
+horizontal_gradient_color_2 = '#8f58f2'
+horizontal_gradient_color_3 = '#c88cff'
+horizontal_gradient_color_4 = '#eadfff'
+
+[smoothing]
+noise_reduction = 68

@@ -1,0 +1,66 @@
+* {
+    bg: rgba(10, 6, 18, 0.96);
+    fg: rgba(244, 235, 255, 1.0);
+    border-col: rgba(185, 121, 255, 0.34);
+}
+
+window {
+    transparency: "real";
+    location: north east;
+    anchor: north east;
+    width: 22em;
+    x-offset: -16px;
+    y-offset: 56px;
+    background-color: @bg;
+    border: 1px;
+    border-radius: 18px;
+    border-color: @border-col;
+    padding: 12px 14px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ "listview" ];
+}
+
+inputbar {
+    enabled: false;
+}
+
+message {
+    enabled: false;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    fixed-height: true;
+    dynamic: false;
+    cycle: false;
+    scrollbar: false;
+    spacing: 4px;
+}
+
+element {
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+element normal.normal,
+element alternate.normal,
+element selected.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrains Mono 12";
+    markup: true;
+    border: 0px;
+    padding: 0px;
+    horizontal-align: 0.5;
+}
