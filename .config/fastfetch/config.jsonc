@@ -5,12 +5,12 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 // "logo": {
 //   "type": "file",
-//   "source": "__HOME__/.config/fastfetch/assets/mylogo.txt"
+//   "source": "/home/halflight/.config/fastfetch/assets/mylogo.txt"
 //   ,"color": "red"
 // },
 "logo": {
     "type": "kitty-icat",
-    "source": "__HOME__/.config/fastfetch/assets/sasuke.png",
+    "source": "/home/halflight/.config/fastfetch/assets/sasuke.png",
     "width": 26,
     "height": 13,
     "preserveAspectRatio": true

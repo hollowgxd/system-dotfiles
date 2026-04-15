@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "sleep 1; __HOME__/.local/bin/session-exit",
+    "action" : "sleep 1; /home/halflight/.local/bin/session-exit",
     "text" : "Exit",
     "keybind" : "e"
 }

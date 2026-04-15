@@ -43,6 +43,7 @@ copy_file "$REPO_ROOT/.config/hypr/wallpapers/midir.jpg" "$TARGET_HOME/.config/h
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/midir.png" "$TARGET_HOME/.config/hypr/wallpapers/midir.png"
 copy_file "$REPO_ROOT/.config/hypr/wallpapers/sddm.png" "$TARGET_HOME/.config/hypr/wallpapers/sddm.png"
 render_template "$REPO_ROOT/.config/hypr/hyprpaper.conf" "$TARGET_HOME/.config/hypr/hyprpaper.conf"
+render_template "$REPO_ROOT/.config/voice-assistant/config.toml" "$TARGET_HOME/.config/voice-assistant/config.toml"
 
 copy_file "$REPO_ROOT/.config/gtk-3.0/settings.ini" "$TARGET_HOME/.config/gtk-3.0/settings.ini"
 copy_file "$REPO_ROOT/.config/gtk-3.0/gtk.css" "$TARGET_HOME/.config/gtk-3.0/gtk.css"
@@ -74,6 +75,7 @@ copy_file "$REPO_ROOT/.config/wofi/style.css" "$TARGET_HOME/.config/wofi/style.c
 copy_file "$REPO_ROOT/.config/cava/config" "$TARGET_HOME/.config/cava/config"
 copy_file "$REPO_ROOT/.config/cava/config-horizontal" "$TARGET_HOME/.config/cava/config-horizontal"
 copy_file "$REPO_ROOT/.config/cava/config-waveform" "$TARGET_HOME/.config/cava/config-waveform"
+copy_file "$REPO_ROOT/.config/rofi/waybar-calendar.rasi" "$TARGET_HOME/.config/rofi/waybar-calendar.rasi"
 
 render_template "$REPO_ROOT/.config/wlogout/style.css" "$TARGET_HOME/.config/wlogout/style.css"
 render_template "$REPO_ROOT/.config/wlogout/layout" "$TARGET_HOME/.config/wlogout/layout"
@@ -115,5 +117,7 @@ copy_executable "$REPO_ROOT/scripts/welcome-layout.sh" "$TARGET_HOME/.local/bin/
 copy_executable "$REPO_ROOT/scripts/welcome-scene.sh" "$TARGET_HOME/.local/bin/welcome-scene"
 copy_executable "$REPO_ROOT/scripts/session-exit.sh" "$TARGET_HOME/.local/bin/session-exit"
 copy_executable "$REPO_ROOT/scripts/cava-preset.sh" "$TARGET_HOME/.local/bin/cava-preset"
+copy_executable "$REPO_ROOT/scripts/waybar-calendar-toggle.sh" "$TARGET_HOME/.local/bin/waybar-calendar-toggle"
+copy_executable "$REPO_ROOT/scripts/voice-assistant.py" "$TARGET_HOME/.local/bin/voice-assistant"
 
 echo "Dotfiles installed into $TARGET_HOME"

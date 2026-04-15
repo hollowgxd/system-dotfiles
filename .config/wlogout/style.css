@@ -69,7 +69,7 @@ button:active {
 
 /* ===== РУНЫ ===== */
 #lock {
-  background-image: image(url("__HOME__/.config/wlogout/lock.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/lock.png"));
   color: #e6ddff;
 }
 
@@ -79,26 +79,26 @@ button:active {
 }
 
 #logout {
-  background-image: image(url("__HOME__/.config/wlogout/exit.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/exit.png"));
   color: #cdbbff;
 }
 
 #suspend {
-  background-image: image(url("__HOME__/.config/wlogout/suspend.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/suspend.png"));
   color: #bfa8ff;
 }
 
 #hibernate {
-  background-image: image(url("__HOME__/.config/wlogout/hibernate.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/hibernate.png"));
   color: #a78bfa;
 }
 
 #reboot {
-  background-image: image(url("__HOME__/.config/wlogout/reboot.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/reboot.png"));
   color: #d4c2ff;
 }
 
 #shutdown {
-  background-image: image(url("__HOME__/.config/wlogout/shutdown.png"));
+  background-image: image(url("/home/halflight/.config/wlogout/shutdown.png"));
   color: #ffb3ff;
 }

@@ -5,7 +5,7 @@
   "margin-left": 12,
   "margin-right": 12,
   "spacing": 10,
-  "height": 46,
+  "height": 52,
   "modules-left": [
     "custom/start",
     "custom/prizrak",
@@ -15,10 +15,10 @@
     "hyprland/window"
   ],
   "modules-right": [
+    "custom/volume",
     "network",
-    "pulseaudio",
     "custom/keyboard",
-    "clock",
+    "custom/clock",
     "custom/power"
   ],
   "custom/start": {
@@ -60,30 +60,27 @@
     "format": "{}",
     "on-click": "~/.config/waybar/scripts/keyboard-layout.sh toggle"
   },
-  "clock": {
-    "locale": "ru_RU.UTF-8",
-    "format": "{:%H:%M}",
-    "format-alt": "{:%a %d.%m}",
-    "tooltip": true,
-    "tooltip-format": "<span size='large' weight='700'>{:%A, %d %B %Y}</span>\n<span foreground='#9683b6'>Неделя {:%V} | {:%H:%M} | {:%Z}</span>\n\n<tt>{calendar}</tt>\n\n<span foreground='#9683b6'>Колесо: листать | ПКМ: месяц/год</span>",
-    "calendar": {
-      "mode": "month",
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "iso8601": true,
-      "format": {
-        "months": "<span foreground='#f4ebff' weight='700'>{}</span>",
-        "days": "<span foreground='#eadfff'>{}</span>",
-        "weeks": "<span foreground='#9683b6'>{}</span>",
-        "weekdays": "<span foreground='#c88cff' weight='700'>{}</span>",
-        "today": "<span foreground='#ffffff' background='#9158f2' weight='700'>{}</span>"
-      }
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+  "custom/clock": {
+    "exec": "/home/halflight/.local/bin/waybar-clock.py",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "/home/halflight/.local/bin/waybar-clock.py toggle-display",
+    "on-click-middle": "/home/halflight/.local/bin/waybar-clock.py today",
+    "on-click-right": "/home/halflight/.local/bin/waybar-clock.py toggle-popup",
+    "on-scroll-up": "/home/halflight/.local/bin/waybar-clock.py prev",
+    "on-scroll-down": "/home/halflight/.local/bin/waybar-clock.py next"
+  },
+  "custom/volume": {
+    "exec": "/home/halflight/.local/bin/waybar-volume.py",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-middle": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 1.0",
+    "on-click-right": "/home/halflight/.local/bin/waybar-volume.py toggle-popup",
+    "on-scroll-up": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 2%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
   },
   "network": {
     "format-wifi": "{signalStrength}%",
@@ -94,19 +91,6 @@
     "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
     "tooltip-format-disconnected": "Network disconnected",
     "on-click": "nm-connection-editor"
-  },
-  "pulseaudio": {
-    "format": "{volume}%",
-    "format-muted": "0%",
-    "tooltip": true,
-    "tooltip-format": "Volume {volume}%\nScroll: +/-2%\nLeft click: mute\nMiddle click: 100%\nRight click: mixer",
-    "scroll-step": 2,
-    "max-volume": 200,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-middle": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 1.0",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 2%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
   },
   "custom/power": {
     "format": " ",

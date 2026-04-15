@@ -1,0 +1,20 @@
+stt_backend = "whispercpp"
+stt_model = "gpt-4o-mini-transcribe"
+stt_local_model_path = "/home/halflight/.local/share/whisper.cpp/models/ggml-large-v3-turbo-q5_0.bin"
+stt_language = "ru"
+stt_prompt = "Russian desktop voice commands about Hyprland, Waybar, Wofi, Codex, Firefox, Discord, Steam, Obsidian, calendar, locking the screen, and volume."
+stt_threads = 6
+
+record_input = "default"
+record_sample_rate = 16000
+record_max_seconds = 30
+cache_max_age_seconds = 3600
+
+route_local_actions = false
+
+terminal = "kitty"
+codex_workdir = "__HOME__"
+codex_model = "gpt-5.4"
+codex_sandbox = "workspace-write"
+
+notify = true

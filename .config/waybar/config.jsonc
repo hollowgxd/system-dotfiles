@@ -1,0 +1,43 @@
+// __        __          _                 
+// \ \      / /_ _ _   _| |__   __ _ _ __  
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
+//   \ V  V / (_| | |_| | |_) | (_| | |    
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
+//                 |___/                   
+//  
+// by Stephan Raabe (2023) 
+// ----------------------------------------------------- 
+//
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+  "spacing": 10,
+  "height": 42,
+  "include": ["~/.config/waybar/modules.json"],
+  "modules-left": [
+    "custom/appmenu",
+    "group/settings",
+    "hyprland/workspaces",
+    "group/quicklinks"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "custom/updates",
+    "network",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "group/hardware",
+    "custom/cliphist",
+    "idle_inhibitor",
+    "tray",
+    "custom/exit",
+    "custom/ml4w-welcome",
+    "clock"
+  ]
+}
