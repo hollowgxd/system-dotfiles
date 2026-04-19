@@ -2,7 +2,21 @@
 
 set -u
 
-BAT_DIR="$(find /sys/class/power_supply -maxdepth 1 -type d -name 'BAT*' 2>/dev/null | sort | head -n1)"
+BAT_DIR=""
+for supply_dir in /sys/class/power_supply/*; do
+  [[ -e "${supply_dir}" ]] || continue
+
+  supply_type=""
+  supply_present="1"
+
+  [[ -r "${supply_dir}/type" ]] && supply_type="$(<"${supply_dir}/type")"
+  [[ -r "${supply_dir}/present" ]] && supply_present="$(<"${supply_dir}/present")"
+
+  if [[ "${supply_type}" == "Battery" && "${supply_present}" != "0" ]]; then
+    BAT_DIR="${supply_dir}"
+    break
+  fi
+done
 
 if [[ -z "${BAT_DIR}" ]]; then
   printf '{"text":" ","tooltip":"No battery detected","class":"ac"}\n'
