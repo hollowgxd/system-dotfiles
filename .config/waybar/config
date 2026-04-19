@@ -8,7 +8,7 @@
   "height": 52,
   "modules-left": [
     "custom/start",
-    "custom/prizrak",
+    "custom/happ",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -17,6 +17,7 @@
   "modules-right": [
     "custom/volume",
     "network",
+    "custom/battery",
     "custom/keyboard",
     "custom/clock",
     "custom/power"
@@ -46,12 +47,13 @@
       "*": 5
     }
   },
-  "custom/prizrak": {
-    "exec": "~/.config/waybar/scripts/prizrak-status.sh",
+  "custom/happ": {
+    "exec": "~/.local/bin/waybar-happ-status.sh",
     "return-type": "json",
     "interval": 3,
     "format": "{}",
-    "on-click": "~/.config/waybar/scripts/prizrak-launch.sh"
+    "on-click": "~/.local/bin/waybar-happ-control.sh",
+    "on-click-right": "~/.local/bin/waybar-happ-control.sh close"
   },
   "custom/keyboard": {
     "exec": "~/.config/waybar/scripts/keyboard-layout.sh",
@@ -61,40 +63,46 @@
     "on-click": "~/.config/waybar/scripts/keyboard-layout.sh toggle"
   },
   "custom/clock": {
-    "exec": "/home/halflight/.local/bin/waybar-clock.py",
+    "exec": "~/.local/bin/waybar-clock.py",
     "return-type": "json",
     "interval": 1,
     "tooltip": false,
-    "on-click": "/home/halflight/.local/bin/waybar-clock.py toggle-display",
-    "on-click-middle": "/home/halflight/.local/bin/waybar-clock.py today",
-    "on-click-right": "/home/halflight/.local/bin/waybar-clock.py toggle-popup",
-    "on-scroll-up": "/home/halflight/.local/bin/waybar-clock.py prev",
-    "on-scroll-down": "/home/halflight/.local/bin/waybar-clock.py next"
+    "on-click": "~/.local/bin/waybar-clock.py toggle-display",
+    "on-click-middle": "~/.local/bin/waybar-clock.py today",
+    "on-click-right": "~/.local/bin/waybar-clock.py toggle-popup",
+    "on-scroll-up": "~/.local/bin/waybar-clock.py prev",
+    "on-scroll-down": "~/.local/bin/waybar-clock.py next"
   },
   "custom/volume": {
-    "exec": "/home/halflight/.local/bin/waybar-volume.py",
+    "exec": "~/.local/bin/waybar-volume.py",
     "return-type": "json",
     "interval": 1,
     "tooltip": false,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-middle": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 1.0",
-    "on-click-right": "/home/halflight/.local/bin/waybar-volume.py toggle-popup",
+    "on-click-right": "~/.local/bin/waybar-volume.py toggle-popup",
     "on-scroll-up": "wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 2%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
   },
   "network": {
-    "format-wifi": "{signalStrength}%",
+    "format-wifi": " ",
     "format-ethernet": " ",
     "format-linked": " ",
-    "format-disconnected": "Offline",
-    "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr}\nSignal: {signalStrength}%",
-    "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+    "format-disconnected": " ",
+    "tooltip-format-wifi": "Wi-Fi: {essid}\n{ipaddr}/{cidr}\nSignal: {signalStrength}%",
+    "tooltip-format-ethernet": "Ethernet: {ifname}\n{ipaddr}/{cidr}",
     "tooltip-format-disconnected": "Network disconnected",
     "on-click": "nm-connection-editor"
+  },
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery-status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "format": "{}"
   },
   "custom/power": {
     "format": " ",
     "tooltip": false,
-    "on-click": "/home/halflight/.local/bin/wlogout -p layer-shell -m 72 -c 24 -r 24"
+    "on-click": "wlogout -p layer-shell -m 72 -c 24 -r 24"
   }
 }

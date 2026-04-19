@@ -5,6 +5,7 @@ set -u
 LOCK_DIR="${XDG_RUNTIME_DIR:-/tmp}"
 LOCK_FILE="$LOCK_DIR/prizrak-launch.lock"
 LOG_FILE="${LOCK_DIR}/prizrak-launch.log"
+START_SCRIPT="${HOME}/start-prizrak.sh"
 
 log() {
   printf '[%s] %s\n' "$(date '+%F %T')" "$*" >> "$LOG_FILE"
@@ -34,8 +35,12 @@ stop_prizrak() {
 }
 
 start_prizrak() {
-  log "start_prizrak: spawning /home/halflight/start-prizrak.sh"
-  setsid bash -c 'exec 9>&-; exec /home/halflight/start-prizrak.sh' >/dev/null 2>&1 < /dev/null &
+  log "start_prizrak: spawning ${START_SCRIPT}"
+  if [[ ! -x "$START_SCRIPT" ]]; then
+    log "start_prizrak: script not found or not executable: $START_SCRIPT"
+    return 1
+  fi
+  setsid bash -c 'exec 9>&-; exec "$1"' _ "$START_SCRIPT" >/dev/null 2>&1 < /dev/null &
 }
 
 cleanup() {

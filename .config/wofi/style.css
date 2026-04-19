@@ -66,9 +66,9 @@ window {
 }
 
 #entry:selected {
-  background-color: rgba(20, 11, 36, 0.96);
-  border-color: rgba(191, 132, 255, 0.18);
-  box-shadow: 0 0 15px rgba(145, 88, 242, 0.2);
+  background-color: rgba(200, 140, 255, 0.96);
+  border-color: rgba(200, 140, 255, 0.55);
+  box-shadow: 0 0 15px rgba(200, 140, 255, 0.24);
   outline: none;
 }
 
@@ -77,5 +77,5 @@ window {
 }
 
 #text:selected {
-  color: #ffffff;
+  color: #07040e;
 }

@@ -75,8 +75,8 @@ treeview.view row:selected {
 treeview.view row:selected,
 treeview.view row:selected:focus {
   background-image: none;
-  background-color: rgba(137, 37, 228, 0.62);
-  color: #ffffff;
+  background-color: rgba(200, 140, 255, 0.78);
+  color: #07040e;
 }
 
 treeview.view row:hover {

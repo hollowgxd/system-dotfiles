@@ -1,0 +1,166 @@
+/* Strong GTK4/libadwaita override for WaybarDark-like look */
+@define-color window_bg_color #07040e;
+@define-color window_fg_color #eadfff;
+@define-color view_bg_color #0d0818;
+@define-color view_fg_color #eadfff;
+@define-color headerbar_bg_color #10081b;
+@define-color popover_bg_color #120a1f;
+@define-color dialog_bg_color #0a0612;
+@define-color card_bg_color #130b21;
+@define-color accent_bg_color #c88cff;
+@define-color accent_color #07040e;
+
+window,
+window.background,
+.background {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+headerbar,
+.titlebar {
+  background: none;
+  background-color: alpha(@headerbar_bg_color, 0.98);
+  color: #f5ecff;
+  border-bottom: 1px solid alpha(@accent_bg_color, 0.28);
+  box-shadow: none;
+}
+
+preferencespage,
+preferencesgroup,
+preferencesgroup > box,
+clamp,
+scrolledwindow,
+viewport {
+  background: transparent;
+  color: @window_fg_color;
+}
+
+/* These are the white cards/rows in libadwaita settings pages */
+.card,
+.boxed-list,
+list.boxed-list,
+preferencesgroup box > .boxed-list {
+  background-color: alpha(@card_bg_color, 0.95);
+  color: @view_fg_color;
+  border: 1px solid alpha(@accent_bg_color, 0.25);
+  box-shadow: none;
+}
+
+.boxed-list > row,
+.boxed-list > row.activatable,
+preferencesrow,
+actionrow,
+entryrow,
+spinrow,
+comborow,
+expanderrow {
+  background-color: alpha(@card_bg_color, 0.9);
+  color: @view_fg_color;
+}
+
+.boxed-list > row:hover,
+.boxed-list > row.activatable:hover,
+preferencesrow:hover,
+actionrow:hover {
+  background-color: alpha(@accent_bg_color, 0.18);
+}
+
+.boxed-list > row:selected,
+.boxed-list > row.activatable:selected,
+.navigation-sidebar row:selected {
+  background-color: alpha(@accent_bg_color, 0.3);
+  color: @accent_color;
+}
+
+label,
+title,
+subtitle,
+.title,
+.subtitle,
+.heading,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: @window_fg_color;
+}
+
+label.dim-label,
+.dim-label {
+  color: alpha(@window_fg_color, 0.72);
+}
+
+entry,
+spinbutton,
+dropdown,
+combobox,
+textview,
+text {
+  color: @view_fg_color;
+  background-color: alpha(@view_bg_color, 0.85);
+}
+
+entry selection,
+text selection {
+  background-color: @accent_bg_color;
+  color: @accent_color;
+}
+
+button,
+modelbutton,
+menubutton > button,
+splitbutton > button {
+  color: @view_fg_color;
+  background-color: alpha(@accent_bg_color, 0.12);
+  border: 1px solid alpha(@accent_bg_color, 0.38);
+}
+
+button:hover,
+modelbutton:hover,
+menubutton > button:hover,
+splitbutton > button:hover {
+  background-color: alpha(@accent_bg_color, 0.22);
+  border-color: alpha(@accent_bg_color, 0.62);
+}
+
+button.suggested-action {
+  background-color: @accent_bg_color;
+  color: @accent_color;
+}
+
+/* HyprMod "Save now" is an Adw.SplitButton, not a plain Gtk.Button */
+splitbutton.suggested-action,
+.toolbar splitbutton.suggested-action {
+  background-color: @accent_bg_color;
+  color: @accent_color;
+}
+
+splitbutton.suggested-action > button,
+splitbutton.suggested-action > menubutton > button,
+.toolbar splitbutton.suggested-action > button,
+.toolbar splitbutton.suggested-action > menubutton > button {
+  background-color: @accent_bg_color;
+  color: @accent_color;
+  border: 1px solid alpha(@accent_bg_color, 0.9);
+}
+
+splitbutton.suggested-action label,
+splitbutton.suggested-action image,
+splitbutton.suggested-action > button > label,
+splitbutton.suggested-action > menubutton > button > label {
+  color: @accent_color;
+}
+
+splitbutton.suggested-action > button:hover,
+splitbutton.suggested-action > menubutton > button:hover {
+  background-color: alpha(@accent_bg_color, 0.88);
+  color: @accent_color;
+}
+
+popover,
+menu,
+dialog {
+  background-color: alpha(@popover_bg_color, 0.98);
+  color: @window_fg_color;
+}

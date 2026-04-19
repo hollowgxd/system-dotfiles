@@ -65,7 +65,7 @@
   },
   "custom/exit": {
     "format": "",
-    "on-click": "/home/halflight/.local/bin/wlogout -p layer-shell -m 72 -c 24 -r 24",
+    "on-click": "wlogout -p layer-shell -m 72 -c 24 -r 24",
     "tooltip": false
   },
   "custom/ml4w-welcome": {

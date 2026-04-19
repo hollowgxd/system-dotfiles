@@ -57,9 +57,10 @@ tooltip label {
 }
 
 #custom-start,
-#custom-prizrak,
+#custom-happ,
 #window,
 #network,
+#custom-battery,
 #custom-volume,
 #custom-keyboard,
 #custom-clock,
@@ -73,9 +74,10 @@ tooltip label {
 }
 
 #custom-start,
-#custom-prizrak,
+#custom-happ,
 #window,
 #network,
+#custom-battery,
 #custom-volume,
 #custom-keyboard,
 #custom-clock,
@@ -85,7 +87,7 @@ tooltip label {
 }
 
 #custom-start,
-#custom-prizrak,
+#custom-happ,
 #network,
 #custom-volume,
 #custom-keyboard,
@@ -98,7 +100,8 @@ tooltip label {
 }
 
 #custom-start,
-#custom-prizrak,
+#custom-happ,
+#custom-battery,
 #custom-power {
   background-repeat: no-repeat;
   background-position: center;
@@ -109,8 +112,9 @@ tooltip label {
 }
 
 #custom-start:hover,
-#custom-prizrak:hover,
+#custom-happ:hover,
 #network:hover,
+#custom-battery:hover,
 #custom-volume:hover,
 #custom-keyboard:hover,
 #custom-clock:hover,
@@ -126,25 +130,25 @@ tooltip label {
   background-image: url("icons/app.svg");
 }
 
-#custom-prizrak {
+#custom-happ {
   min-width: 34px;
   color: transparent;
-  background-image: url("/home/halflight/prizrak-box.svg");
+  background-image: url("icons/happ.png");
   background-size: 18px 18px;
 }
 
 #custom-start.active,
-#custom-prizrak.active {
+#custom-happ.active {
   background-color: @active;
   border-color: rgba(215, 164, 255, 0.16);
   box-shadow: 0 0 18px rgba(173, 94, 255, 0.28), inset 0 0 0 1px rgba(242, 216, 255, 0.04);
 }
 
-#custom-prizrak.active {
-  background-image: url("/home/halflight/prizrak-box.svg");
+#custom-happ.active {
+  background-image: url("icons/happ.png");
 }
 
-#custom-prizrak.inactive {
+#custom-happ.inactive {
   opacity: 0.82;
 }
 
@@ -192,20 +196,56 @@ tooltip label {
 }
 
 #network {
-  color: #efe4ff;
-  min-width: 54px;
-  background-image: url("icons/network.svg");
+  color: transparent;
+  min-width: 32px;
+  padding-left: 0;
+  padding-right: 0;
+  background-position: center;
+  background-size: 16px 16px;
+  background-image: url("icons/wifi.svg");
+}
+
+#network.wifi {
+  background-image: url("icons/wifi.svg");
 }
 
 #network.ethernet,
-#network.linked,
+#network.linked {
+  background-image: url("icons/world-code.svg");
+}
+
 #network.disconnected {
-  min-width: 30px;
-  padding-left: 0;
-  padding-right: 0;
   color: transparent;
+  background-image: url("icons/network.svg");
+}
+
+#custom-battery {
+  min-width: 32px;
+  color: transparent;
+  background-image: url("icons/battery-4.svg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: 15px 15px;
+  background-size: 16px 16px;
+}
+
+#custom-battery.level-1 {
+  background-image: url("icons/battery-1.svg");
+}
+
+#custom-battery.level-2 {
+  background-image: url("icons/battery-2.svg");
+}
+
+#custom-battery.level-3 {
+  background-image: url("icons/battery-3.svg");
+}
+
+#custom-battery.level-4 {
+  background-image: url("icons/battery-4.svg");
+}
+
+#custom-battery.ac {
+  background-image: url("icons/battery-automotive.svg");
 }
 
 #custom-volume {
